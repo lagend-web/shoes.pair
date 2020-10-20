@@ -1,0 +1,25 @@
+var a=[1,1,1,1,2,3,3,3,3,3,3,3,4,4,4,4,4];
+
+var b= a.slice(0,4);
+var c= a.slice(4,5);
+var d= a.slice(5,12);
+var e= a.slice(12,18)
+
+document.write(a+"<br>")
+document.write(b +"<br>");
+document.write (c +"<br>")
+document.write(d + "<br>");
+document.write(e + "<br>");
+
+function pairNumber(arr) {
+  const sorted_arr = arr.sort();
+  const results = [];
+  for (let i = 0; i < sorted_arr.length; i++) {
+    if (sorted_arr[i] == sorted_arr[i + 1]) {
+      results.push(sorted_arr[i]);
+      i = i + 1; 
+    }
+  }
+  return results.length;
+} 
+document.write((pairNumber (a)));
